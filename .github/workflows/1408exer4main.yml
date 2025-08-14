@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: http://illustrious-help.surge.sh
+      url: http://neat-destruction.surge.sh
     steps:
       - name: download build artifacts
         uses: actions/download-artifact@v4
@@ -54,7 +54,7 @@ jobs:
           name: build
 
       - name: deploy to surge
-        run: npx surge --project '.' --domain illustrious-help.surge.sh
+        run: npx surge --project '.' --domain neat-destruction.surge.sh
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
