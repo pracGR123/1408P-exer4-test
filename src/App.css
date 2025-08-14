@@ -1,38 +1,73 @@
-.App {
+.app-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.capybara {
+  position: relative;
+  width: 120px;
+  height: 80px;
+  background: #c18f65;
+  border-radius: 60px;
+  animation: dance 1s infinite alternate ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  background: #c18f65;
+  border-radius: 60px;
+}
+
+.head {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #c18f65;
+  border-radius: 50%;
+  top: -25px;
+  left: 80px;
+}
+
+.ear {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #8b5e3b;
+  border-radius: 50%;
+  top: -15px;
+}
+
+.ear.left {
+  left: 90px;
+}
+
+.ear.right {
+  left: 105px;
+}
+
+.leg {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #8b5e3b;
+  border-radius: 10px;
+  bottom: -15px;
+}
+
+.front-left { left: 15px; }
+.front-right { left: 45px; }
+.back-left { left: 75px; }
+.back-right { left: 100px; }
+
+@keyframes dance {
+  0%   { transform: rotate(-5deg) translateY(0px); }
+  100% { transform: rotate(5deg) translateY(-5px); }
 }
